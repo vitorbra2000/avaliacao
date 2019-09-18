@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    
+    <%- include('imports'); -%>
+
+  </head>
+  <body>
+      <%- include('navbar'); -%>
+    <h1>Empresas e serviços</h1>
+
+    <h2></h2>
+    <div class="container">
+      <div class="row">
+        <% posts.forEach ((post) => { %>
+          <div class="col-4 mb-5">
+            <%- include('post_card', {post:post}); -%>
+          </div>
+        <% }); %>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
